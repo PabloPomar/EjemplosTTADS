@@ -1,0 +1,5 @@
+200: Requested file found:./file2.txt  fecha:2019-4-5 15:25:41
+404: file not found: ./  fecha:2019-4-5 15:27:54
+404: file not found: ./favicon.ico  fecha:2019-4-5 15:27:54
+200: Requested file found:./file1.txt  fecha:2019-4-5 15:27:54
+200: Requested file found:./file2.txt  fecha:2019-4-5 15:27:54
