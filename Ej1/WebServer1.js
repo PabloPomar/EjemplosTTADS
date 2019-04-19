@@ -6,8 +6,16 @@ var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(
 var dateTime = date+' '+time;
 
 
+
+
 http.createServer(function (req, res) {
   let file='.'+req.url;
+
+  if (file.includes("logger.txt")){
+    res.writeHead(403, {'Content-Type': 'text/plain'});
+    res.write("Error 403 - Access Denied \n");
+    res.end();
+  } else {
 
   fs.readFile(file,'utf8',(err,data)=>{
     if(err){
@@ -27,7 +35,8 @@ http.createServer(function (req, res) {
     })
       res.end(data);
     }
-  });
+  })};
 }).listen(8080);
+
 
 console.log('Vive');
